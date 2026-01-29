@@ -1,0 +1,19 @@
+## Project Settings
+# 忽略所有以 DONT_GIT_ 开头的文件
+DONT_GIT_*
+
+# Byte-compiled files
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment directories
+venv/
+env/
+.venv/
+
+# PyCharm project files
+.idea/
+
