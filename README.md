@@ -1,5 +1,7 @@
 # Python Project Starter Template
 
+[English] | [繁體中文](README.zh-TW.md)
+
 ## Description
 This repository provides a ready-to-use **Python Template** for quickly starting new projects.  
 It is designed as a public starter template that can be cloned or downloaded to immediately begin development with minimal setup.
