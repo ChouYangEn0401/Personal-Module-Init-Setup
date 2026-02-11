@@ -40,34 +40,42 @@ Additional templates for specialized use cases:
 
 ## Available Branches
 
-| 開發狀況      | 期待功能                                          | branch         | 說明                                                     |
-|-----------| ------------------------------------------------ |----------------|--------------------------------------------------------|
-| dev       | Basic Project Initialization - TDD              | `basic-tdd`    | 單純 Python 專案 + 測試先行設計                                  |
-| dev       | Basic Project Initialization - Class Skeleton | `basic-class`  | 最小 class 架構，未套入框架                                      |
-| dev       | Basic Project Initialization - Framework-Based Classing | `basic-isd`    | 最小 class 架構，套入 `ISDFramework` 框架 |
-| release   | Toolkit Initialization           | `toolkit`      | 可打包成 pip 套件的專案模板                                       |
-| **hault** | Strangler Pattern Initialization | `strangler`    | 漸進取代舊系統的模式                                             |
-| dev       | AI/ML Project Initialization | `ai`           | 包含 AI/ML 範例與環境配置                                       |
-| **hault** | Microservice Skeleton | `microservice` | 適合拆小服務的專案骨架                                            |
-| **hault** | CLI Tool Skeleton | `cli`          | 建立命令列工具的專案模板                                           |
-| **hault** | Web App Skeleton | `web`          | 最基本的 Web 專案結構（Flask/FastAPI）                           |
+| 開發狀況              | 期待功能                                                    | branch         | 說明                                                          |
+|-------------------|---------------------------------------------------------|----------------|-------------------------------------------------------------|
+| RELEASE           | Toolkit Initialization                                  | `toolkit`      | 可打包成 pip 套件的專案模板                                            |
+| dev               | Basic Project Initialization - Class Skeleton           | `basic-class`  | 最小 class 架構，未套入框架                                           |
+| dev               | Basic Experimental Project Initialization - Facade Init | `exp-facade`   | 透過基本的Pattern快速建立最基本的實驗運作流程（Facade/Adapter/Strategy/Inherit） |
+| ***legacy***      | AI/ML Project Initialization                            | `ai`           | 包含 AI/ML 範例與環境配置                                            |
+| ***legacy***      | A Basic Tkinter Init Pack With Framework Built In       | `tkinter-pack` | 引用部分 ISDFramework 的架構，專門為了 tkinter 工具而開發的底層   |
+| ***todo***        | Basic Project Initialization - TDD                      | `basic-tdd`    | 單純 Python 專案 + 測試先行設計                                       |
+| ***todo***        | Basic Project Initialization - Framework-Based Classing | `basic-isd`    | 最小 class 架構，套入 `ISDFramework` 框架                            |
+| **~~hault~~**     | Strangler Pattern Initialization                        | `strangler`    | 漸進取代舊系統的模式                                                  |
+| **~~hault~~**     | Microservice Skeleton                                   | `microservice` | 適合拆小服務的專案骨架                                                 |
+| **~~hault~~**     | CLI Tool Skeleton                                       | `cli`          | 建立命令列工具的專案模板                                                |
+| **~~hault~~**     | Web App Skeleton                                        | `web`          | 最基本的 Web 專案結構（Flask/FastAPI）                                |
 
 ---
 
 ## Recommended Usage
-- If you want a **simple starting point**, use the **Class Skeleton** branch.
-- For projects that require **TDD**, use the **TDD** branch.
-- For gradually modernizing legacy code, use the **Strangler** branch.
-- For **AI/ML projects**, use the **AI** branch.
+- If you want a **Simple Starting Proj**, use the **basic-class** branch.
+- For **AI/ML projects**, use the **ai** branch.
+- Dealing with mvp/experiment, **exp-facade** branch just where to go.
+- As For GUI Tkinter Project, **tkinter-pack** branch will be your best option.
+- For projects that require **Test Driven Design**, use the **basic-tdd** branch.
+- For gradually modernizing legacy code and do old-new-feature switch, use the **strangler** branch.
 - Other specialized projects can use the **Microservice**, **CLI**, or **Web** branches.
 
 ---
 
 ## Getting Started
-
-1. **Clone the repository**:
+1-\[method1\]. **Clone the repository**:
  ```bash
  git clone <repo-url>
+ cd <repo-folder>
+````
+1-\[method2\]. **Clone the repository**:
+```bash
+ git clone -b <branch-name> <repo-url>
  cd <repo-folder>
 ````
 
@@ -75,7 +83,7 @@ Additional templates for specialized use cases:
 ```bash
 git checkout <branch-name>
 ```
-3. Install dependencies (if applicable):
+3. Install dependencies (if applicable) (Make Sure VirtualEnvironment Is Built First !!):
 ```bash
 pip install -r requirements.txt
 ```
